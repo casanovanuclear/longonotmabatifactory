@@ -1,112 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mount Longonot Mabati Factory Ltd</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Mount Longonot Mabati Factory — quality roofing sheets, accessories and land services in Kenya." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- ===== HEADER ===== -->
-  <header class="header">
-    <div class="container">
-      <div class="logo-area">
-        <img src="images/logo.png" alt="Mount Longonot Mabati Logo" class="logo">
-        <h1>Mount Longonot Mabati Factory Ltd</h1>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img src="images/logo.png" alt="Mount Longonot Mabati logo" class="logo" />
+        <div class="brand-text">
+          <h1>Mount Longonot Mabati Factory Ltd</h1>
+          <p class="tagline">Mabati Ya Ki-Sure — Strong, Durable, Reliable</p>
+        </div>
       </div>
-      <nav class="navbar">
-        <a href="#about">About Us</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
         <a href="#why">Why Choose Us</a>
-        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- ===== HERO / BACKGROUND SECTION ===== -->
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h2>Strong. Durable. Reliable.</h2>
-      <p>Supplying quality mabati roofing sheets and construction materials across Kenya.</p>
-      <a href="#contact" class="cta-btn">Get in Touch</a>
+  <!-- HERO -->
+  <section class="hero" id="home" aria-label="Hero">
+    <div class="hero-bg" style="background-image: url('images/hero-bg.jpg')"></div>
+    <div class="hero-overlay"></div>
+    <div class="wrap hero-content">
+      <h2>Quality Roofing Sheets & Accessories</h2>
+      <p class="hero-lead">Manufactured to withstand local weather — delivered across Kenya from Naivasha.</p>
+      <p class="hero-cta">
+        <a class="btn btn-primary" href="#products">View Products</a>
+        <a class="btn btn-outline" href="#contact">Get Quote</a>
+      </p>
     </div>
+    <div class="floating-particles" aria-hidden="true"></div>
   </section>
 
-  <!-- ===== ABOUT SECTION ===== -->
-  <section id="about" class="section about">
-    <h2>About Us</h2>
-    <p>
-      Mount Longonot Mabati Factory Ltd is a leading supplier of high-quality roofing sheets and accessories in Kenya. 
-      We combine modern technology and durable materials to ensure lasting protection for homes and businesses.
-    </p>
-  </section>
+  <main>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <h2>About Us</h2>
+        <p class="lead">
+          MT Longonot Mabati Factory is an upcoming manufacturer of high quality roofing sheets. We provide reliable and durable roofing
+          solutions to homes and businesses across Kenya. We are located in Mirera Mastima Centre along Naivasha–Mai Mahiu highway in Naivasha.
+        </p>
+        <p>
+          We manufacture a wide range of profiles — box profile, Longonot tile shapes, roll-top, bowtile, ridge caps, valley sheets and
+          offer nails & rubbers. Our team focuses on durable finishes, consistent quality and reliable delivery.
+        </p>
+      </div>
+    </section>
 
-  <!-- ===== WHY CHOOSE US ===== -->
-  <section id="why" class="section why">
-    <h2>Why Choose Us</h2>
-    <div class="why-cards">
-      <div class="card">✅ Quality Mabati Sheets</div>
-      <div class="card">💰 Affordable Prices</div>
-      <div class="card">🚚 Fast Delivery</div>
-      <div class="card">👷 Professional Service</div>
-      <div class="card">🌿 Long-lasting Protection</div>
+    <!-- WHY -->
+    <section id="why" class="section alt">
+      <div class="wrap two-col">
+        <div>
+          <h2>Why Choose Us</h2>
+          <ul class="bullet-list">
+            <li><strong>Trusted & Reliable</strong> — products made to industry standards and local conditions.</li>
+            <li><strong>Affordable Pricing</strong> — competitive rates across product ranges.</li>
+            <li><strong>Skilled Professionals</strong> — experienced team for advice and installation guidance.</li>
+            <li><strong>Timely Delivery</strong> — transport and logistics for timely job completion.</li>
+            <li><strong>Customer Satisfaction</strong> — quality checks & after-sales support.</li>
+          </ul>
+        </div>
+        <div class="why-visual">
+          <img src="images/product-box.jpg" alt="Box Profile sample">
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="section">
+      <div class="wrap">
+        <h2>Our Products</h2>
+        <p class="lead">We make and supply these popular profiles and accessories.</p>
+
+        <div class="product-grid" role="list">
+          <article class="product-card" role="listitem">
+            <img src="images/product-box.jpg" alt="Box Profile">
+            <h3>Box Profile Sheets</h3>
+            <p>Durable, strong and ideal for modern roofing.</p>
+          </article>
+
+          <article class="product-card" role="listitem">
+            <img src="images/product-roman.jpg" alt="Longonot Roman Tile">
+            <h3>Longonot Roman Tile</h3>
+            <p>Classic tile look with metal strength.</p>
+          </article>
+
+          <article class="product-card" role="listitem">
+            <img src="images/product-roll.jpg" alt="Longonot Roll Top">
+            <h3>Longonot Roll Top</h3>
+            <p>Smooth finish and secure overlap.</p>
+          </article>
+
+          <article class="product-card" role="listitem">
+            <img src="images/product-bow.jpg" alt="Longonot Bowtile">
+            <h3>Longonot Bowtile</h3>
+            <p>Stylish profile for modern homes.</p>
+          </article>
+
+          <article class="product-card" role="listitem">
+            <img src="images/product-valley.jpg" alt="Longonot Valleys">
+            <h3>Longonot Valleys</h3>
+            <p>Custom valleys for proper runoff.</p>
+          </article>
+
+          <article class="product-card" role="listitem">
+            <img src="images/product-ridge.jpg" alt="Ridge Cap Sheets">
+            <h3>Ridge Cap Sheets</h3>
+            <p>Sealed ridge caps to finish roofs.</p>
+          </article>
+
+          <article class="product-card" role="listitem">
+            <img src="images/nails.jpg" alt="Roofing Nails & Rubbers">
+            <h3>Roofing Nails & Rubbers</h3>
+            <p>Quality fasteners & sealant rubbers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section alt">
+      <div class="wrap">
+        <h2>Project Gallery</h2>
+        <div class="gallery-slider" aria-hidden="false">
+          <div class="g-slide"><img src="images/gallery1.jpg" alt="Project 1"></div>
+          <div class="g-slide"><img src="images/gallery2.jpg" alt="Project 2"></div>
+          <div class="g-slide"><img src="images/gallery3.jpg" alt="Project 3"></div>
+          <div class="g-slide"><img src="images/gallery4.jpg" alt="Project 4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Get in touch</h3>
+            <p><strong>Phone:</strong> <a href="tel:+254718081490">+254 718 081 490</a></p>
+            <p><strong>Email:</strong> <a href="mailto:longonotmabatifactory@gmail.com">longonotmabatifactory@gmail.com</a></p>
+            <p><strong>Address:</strong> Mirera Mastima Centre, Naivasha–Mai Mahiu Highway</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Opening Hours</h3>
+            <p>Mon–Fri: 8:00 AM – 5:00 PM</p>
+            <p>Sat: 8:00 AM – 12:00 PM</p>
+            <p>Sun: Closed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Mount Longonot Mabati Factory Ltd — All rights reserved.</p>
+      <p class="small">Designed in the style of modern, professional roofing manufacturers. Images are placeholders — replace with your own.</p>
     </div>
-  </section>
-
-  <!-- ===== SERVICES SECTION ===== -->
-  <section id="services" class="section services">
-    <h2>Our Products & Services</h2>
-    <div class="slideshow-container">
-      <div class="slide fade">
-        <img src="images/mabati1.jpg" alt="Mabati Sample 1">
-      </div>
-      <div class="slide fade">
-        <img src="images/mabati2.jpg" alt="Mabati Sample 2">
-      </div>
-      <div class="slide fade">
-        <img src="images/mabati3.jpg" alt="Mabati Sample 3">
-      </div>
-    </div>
-    <ul class="service-list">
-      <li>Manufacturing and Supply of Mabati Roofing Sheets</li>
-      <li>Custom Roofing Designs</li>
-      <li>Delivery Services Nationwide</li>
-      <li>Installation Support</li>
-      <li>Consultation for Roof Planning</li>
-    </ul>
-  </section>
-
-  <!-- ===== CONTACT SECTION ===== -->
-  <section id="contact" class="section contact">
-    <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> +254 718 081 490</p>
-    <p><strong>Email:</strong> longonotmabatifactory@gmail.com</p>
-    <p><strong>Location:</strong> Mirera Mastima Centre, Naivasha–Mai Mahiu Highway</p>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <p>&copy; <?= date('Y') ?> Mount Longonot Mabati Factory Ltd. All Rights Reserved.</p>
   </footer>
 
-  <script>
-    // Simple slideshow effect
-    let slideIndex = 0;
-    showSlides();
-    function showSlides() {
-      let slides = document.querySelectorAll(".slide");
-      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
-      slideIndex++;
-      if (slideIndex > slides.length) slideIndex = 1;
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 4000); // 4s interval
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
