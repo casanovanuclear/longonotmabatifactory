@@ -1,0 +1,146 @@
+/* RESET & BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+.logo {
+  height: 60px;
+  margin-right: 10px;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.navbar a:hover {
+  color: #a5d6a7;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 85vh;
+  background: url('images/background.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 100, 0, 0.5);
+}
+.hero-content {
+  position: relative;
+  color: white;
+  z-index: 1;
+  max-width: 700px;
+}
+.hero-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+.cta-btn {
+  background: #43a047;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.cta-btn:hover {
+  background: #2e7d32;
+}
+
+/* SECTION STYLES */
+.section {
+  width: 90%;
+  margin: auto;
+  padding: 60px 0;
+  text-align: center;
+}
+h2 {
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+/* WHY CHOOSE US */
+.why-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.card {
+  background: #e8f5e9;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid #c8e6c9;
+  width: 200px;
+  font-weight: 500;
+}
+
+/* SLIDESHOW */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.slide {
+  display: none;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* CONTACT */
+.contact p {
+  margin: 10px 0;
+}
+
+/* FOOTER */
+.footer {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
