@@ -1,145 +1,90 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #f9f9f9;
-  color: #333;
-  scroll-behavior: smooth;
+/* Basic reset */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#2e7d32;
+  --green-strong:#1b5e20;
+  --muted:#f4f6f4;
+  --accent:#43a047;
+  --text:#222;
+  --wrap-width:1100px;
+  --radius:10px;
 }
 
-/* HEADER */
-.header {
-  background-color: #2e7d32;
-  color: white;
-  padding: 10px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: auto;
-}
-.logo {
-  height: 60px;
-  margin-right: 10px;
-}
-.logo-area {
-  display: flex;
-  align-items: center;
-}
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-.navbar a:hover {
-  color: #a5d6a7;
-}
+/* Layout helpers */
+.wrap{width:90%;max-width:var(--wrap-width);margin:0 auto}
 
-/* HERO SECTION */
-.hero {
-  position: relative;
-  height: 85vh;
-  background: url('images/background.jpg') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 100, 0, 0.5);
-}
-.hero-content {
-  position: relative;
-  color: white;
-  z-index: 1;
-  max-width: 700px;
-}
-.hero-content h2 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-}
-.hero-content p {
-  font-size: 1.2em;
-  margin-bottom: 25px;
-}
-.cta-btn {
-  background: #43a047;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.cta-btn:hover {
-  background: #2e7d32;
-}
+/* Header */
+.site-header{background:var(--green);color:#fff;position:sticky;top:0;z-index:90}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{height:56px;width:auto;border-radius:6px}
+.brand-text h1{font-size:1.1rem}
+.tagline{font-size:0.85rem;opacity:0.95}
 
-/* SECTION STYLES */
-.section {
-  width: 90%;
-  margin: auto;
-  padding: 60px 0;
-  text-align: center;
-}
-h2 {
-  color: #2e7d32;
-  margin-bottom: 20px;
-}
+/* Nav */
+.main-nav a{color:#fff;text-decoration:none;margin-left:16px;font-weight:600}
+.main-nav a:hover{color:#d7f1d7}
 
-/* WHY CHOOSE US */
-.why-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-.card {
-  background: #e8f5e9;
-  padding: 15px 20px;
-  border-radius: 8px;
-  border: 1px solid #c8e6c9;
-  width: 200px;
-  font-weight: 500;
-}
+/* HERO */
+.hero{position:relative;height:78vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-position:center;background-size:cover;filter:brightness(0.55);z-index:0}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,70,6,0.45),rgba(6,70,6,0.55));z-index:1}
+.hero-content{position:relative;z-index:2;padding:40px 20px;max-width:900px}
+.hero h2{font-size:2.6rem;margin-bottom:10px;letter-spacing:0.5px}
+.hero-lead{font-size:1.05rem;margin-bottom:18px}
+.btn{display:inline-block;padding:12px 18px;border-radius:6px;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff;margin-right:8px}
+.btn-outline{background:transparent;border:2px solid rgba(255,255,255,0.18);color:#fff}
 
-/* SLIDESHOW */
-.slideshow-container {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 20px auto;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-.slide {
-  display: none;
-}
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
+/* Floating particles */
+.floating-particles{position:absolute;inset:0;z-index:0;pointer-events:none;}
 
-/* CONTACT */
-.contact p {
-  margin: 10px 0;
-}
+/* Sections */
+.section{padding:58px 0;background:linear-gradient(180deg,#fff,#fbfffb)}
+.section.alt{background:#f8fff8}
+.section .lead{max-width:900px;margin:10px auto 20px;color:var(--text);opacity:0.95}
 
-/* FOOTER */
-.footer {
-  background: #2e7d32;
-  color: white;
-  text-align: center;
-  padding: 15px;
+/* Two column */
+.two-col{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+.why-visual img{max-width:100%;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+
+/* bullet list */
+.bullet-list{list-style:disc;margin-left:20px;line-height:1.7}
+
+/* Product grid */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-top:18px}
+.product-card{background:#fff;border-radius:8px;padding:12px;border:1px solid #e6f4e6;box-shadow:0 6px 18px rgba(0,0,0,0.04);text-align:center}
+.product-card img{width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:10px}
+.product-card h3{color:var(--green-strong);font-size:1rem;margin-bottom:6px}
+
+/* Gallery */
+.gallery-slider{display:flex;gap:12px;overflow:hidden;border-radius:8px}
+.g-slide{min-width:100%;flex-shrink:0;display:none}
+.g-slide img{width:100%;height:320px;object-fit:cover;border-radius:8px}
+
+/* Contact grid */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-card{background:#fff;padding:18px;border-radius:8px;border:1px solid #e9f3ea}
+
+/* Units */
+.unit-list{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.unit{background:#f6fff6;padding:14px;border-radius:8px;border:1px solid #dcedc8;width:260px;text-align:left}
+.available{color:green;font-weight:700}
+.sold{color:#c62828;font-weight:700}
+
+/* Footer */
+.site-footer{background:var(--green);color:#fff;padding:18px 0;text-align:center;font-size:0.95rem}
+.site-footer .small{opacity:0.85;margin-top:6px;font-size:0.82rem}
+
+/* Responsive */
+@media(max-width:900px){
+  .two-col{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .hero h2{font-size:2rem}
+  .product-card img{height:160px}
+}
+@media(max-width:600px){
+  .main-nav{display:none}
+  .hero{height:60vh}
+  .brand-text h1{font-size:1rem}
 }
