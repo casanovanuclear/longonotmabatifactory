@@ -88,3 +88,90 @@
   .hero{height:60vh}
   .brand-text h1{font-size:1rem}
 }
+/* Projects Section */
+.projects-section {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.slideshow-container {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.text {
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 100, 0, 0.5);
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 3px;
+  user-select: none;
+  background: rgba(0, 100, 0, 0.6);
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background: #2e7d32;
+}
+
+/* Dots */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.4s;
+}
+
+.active, .dot:hover {
+  background-color: #2e7d32;
+}
+
+/* Fade animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.2s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
