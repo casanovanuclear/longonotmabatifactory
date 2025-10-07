@@ -148,20 +148,40 @@
     </section>
 
     <!-- GALLERY -->
-    <section id="gallery" class="section alt">
-      <div class="wrap">
-        <h2>Project Gallery</h2>
-        <div class="gallery-slider" aria-hidden="false">
-          <div class="g-slide"><img src="root 3.jpg" alt="Root 3"></div>
-          <div class="g-slide"><img src="root 4.jpg" alt="Root 4"></div>
-          <div class="g-slide"><img src="root 5.jpg" alt="Root 5"></div>
-          <div class="g-slide"><img src="root 6.jpg" alt="Root 6"></div>
-          <div class="g-slide"><img src="root 7.jpg" alt="Root 7"></div>
-          <div class="g-slide"><img src="root 8.jpg" alt="Root 8"></div>
-          <div class="g-slide"><img src="root 10.jpg" alt="Root 10"></div>
-        </div>
-      </div>
-    </section>
+  <!-- ====== PROJECTS SECTION ====== -->
+<section id="projects" class="projects-section">
+  <h2>Our Roofing Projects</h2>
+  <div class="slideshow-container">
+
+    <!-- Each slide -->
+    <div class="mySlides fade">
+      <img src="root 3.jpg" alt="Project 1 - Residential Roofing">
+      <div class="text">Residential Roofing - Classic Tile Profile</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="root 4.jpg" alt="Root 4 - Industrial Roofing">
+      <div class="text">Industrial Roofing - Box Profile</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/project3.jpg" alt="Project 3 - Mabati Installation">
+      <div class="text">Mabati Installation - Versatile Profile</div>
+    </div>
+
+    <!-- Slideshow navigation -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <!-- Dots -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</section>
+
 
     <!-- CONTACT -->
     <section id="contact" class="section">
@@ -198,5 +218,37 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+// Auto change slides
+setInterval(() => { plusSlides(1); }, 4000);
+</script>
+
 </body>
 </html>
