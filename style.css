@@ -88,31 +88,60 @@
   .hero{height:60vh}
   .brand-text h1{font-size:1rem}
 }
-/* Projects Section */
-.projects-section {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 60px 20px;
-  text-align: center;
+
+/* ====== GALLERY SECTION ====== */
+.gallery-section {
   position: relative;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
 }
 
+/* Animated green glowing background */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #006400 0%, #003300 80%);
+  animation: gradientMove 10s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes gradientMove {
+  0% { background: radial-gradient(circle at 30% 40%, #006400, #003300); }
+  50% { background: radial-gradient(circle at 70% 60%, #004d00, #002200); }
+  100% { background: radial-gradient(circle at 50% 50%, #007a00, #001a00); }
+}
+
+.gallery-section h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 2em;
+  color: #e8f5e9;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Slideshow styling */
 .slideshow-container {
-  max-width: 90%;
+  max-width: 85%;
   position: relative;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  z-index: 1;
 }
 
-.mySlides {
-  display: none;
-}
+.mySlides { display: none; }
 
 .mySlides img {
   width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 12px;
 }
 
 .text {
@@ -120,30 +149,28 @@
   font-size: 18px;
   padding: 10px;
   position: absolute;
-  bottom: 15px;
+  bottom: 0;
   width: 100%;
   text-align: center;
-  background: rgba(0, 100, 0, 0.5);
+  background: rgba(0, 80, 0, 0.6);
 }
 
+/* Navigation arrows */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
   padding: 10px;
-  margin-top: -22px;
   color: white;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 20px;
   border-radius: 3px;
   user-select: none;
-  background: rgba(0, 100, 0, 0.6);
+  background: rgba(0, 80, 0, 0.6);
+  z-index: 2;
 }
 
-.next {
-  right: 0;
-}
+.next { right: 0; }
 
 .prev:hover, .next:hover {
   background: #2e7d32;
@@ -162,16 +189,15 @@
 }
 
 .active, .dot:hover {
-  background-color: #2e7d32;
+  background-color: #4caf50;
 }
 
-/* Fade animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.2s;
 }
 
 @keyframes fade {
-  from { opacity: 0.4; }
+  from { opacity: 0.6; }
   to { opacity: 1; }
 }
