@@ -147,14 +147,16 @@
       </div>
     </section>
 
-    <!-- GALLERY -->
-  <!-- ====== PROJECTS SECTION ====== -->
-<section id="project" class="projects-section">
-  <h2>Our Roofing Projects</h2>
+
+<!-- ====== GALLERY SECTION ====== -->
+<section id="gallery" class="gallery-section">
+  <div class="animated-bg"></div>
+  <h2>Our Roofing Gallery</h2>
+
   <div class="slideshow-container">
 
     <!-- Each slide -->
-    <div class="mySlides fade">
+      <div class="mySlides fade">
       <img src="root 7.jpg" alt="Project 1 - Residential Roofing">
       <div class="text">Residential Roofing - Box Profile</div>
     </div>
@@ -166,21 +168,21 @@
 
       <div class="mySlides fade">
       <img src="bowtile 2.jpeg" alt="bowtile - Finished Roof">
-      <div class="text">Mabati Installation - Bowtile Profile</div>
+      <div class="text">Bowtile Installation - Premium finish</div>
     </div>
     
-      <div class="mySlides fade">
+   <div class="mySlides fade">
       <img src="versatile 2.jpeg" alt="Project 3 - Mabati Installation">
-      <div class="text">Mabati Installation - Versatile Profile</div>
+      <div class="text">Durable and Elegant - Versatile Profile</div>
     </div>
 
-    <!-- Slideshow navigation -->
+    <!-- Navigation arrows -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
 
   <!-- Dots -->
-  <div style="text-align:center">
+  <div style="text-align:center; margin-top: 10px;">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
@@ -251,6 +253,27 @@ function showSlides(n) {
 }
 
 // Auto change slides
+setInterval(() => { plusSlides(1); }, 4000);
+</script>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) { showSlides(slideIndex += n); }
+function currentSlide(n) { showSlides(slideIndex = n); }
+
+function showSlides(n) {
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
 setInterval(() => { plusSlides(1); }, 4000);
 </script>
 
